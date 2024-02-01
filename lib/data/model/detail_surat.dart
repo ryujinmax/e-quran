@@ -45,7 +45,7 @@ class DetailSurahModel {
         status: json["status"],
         ayat: json["ayat"] == null ? [] : List<Ayat>.from(json["ayat"]!.map((x) => Ayat.fromJson(x))),
         suratSelanjutnya: json["surat_selanjutnya"] == null ? null : SuratSelanjutnya.fromJson(json["surat_selanjutnya"]),
-        suratSebelumnya: json["surat_sebelumnya"],
+        // suratSebelumnya: json["surat_sebelumnya"],
     );
 
     Map<String, dynamic> toJson() => {
