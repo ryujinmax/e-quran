@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:flutter_ahlul_quran_app/cubit/ayat/ayat_cubit.dart';
 import 'package:flutter_ahlul_quran_app/cubit/surah/surah_cubit.dart';

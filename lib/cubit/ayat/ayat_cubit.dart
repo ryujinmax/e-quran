@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_ahlul_quran_app/data/model/detail_surat.dart';
 import 'package:flutter_ahlul_quran_app/data/service_api.dart';
 
