@@ -3,6 +3,7 @@ import 'package:flutter_ahlul_quran_app/common/contants.dart';
 import 'package:flutter_ahlul_quran_app/cubit/surah/surah_cubit.dart';
 import 'package:flutter_ahlul_quran_app/ui/ayat_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SurahPage extends StatefulWidget {
   const SurahPage({super.key});
@@ -22,12 +23,20 @@ class _SurahPageState extends State<SurahPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(24.r),
+          ),
+        ),
+        backgroundColor: AppColors.bg,
         title: const Text(
           "Al Quran",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppColors.white,
+          ),
         ),
         centerTitle: true,
-        backgroundColor: AppColors.primary,
       ),
       body: BlocBuilder<SurahCubit, SurahState>(builder: (context, state) {
         if (state is SurahLoading) {

@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_ahlul_quran_app/cubit/ayat/ayat_cubit.dart';
 import 'package:flutter_ahlul_quran_app/data/model/surat_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AyatPage extends StatefulWidget {
   const AyatPage({
@@ -29,11 +30,19 @@ class _AyatPageState extends State<AyatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(24.r),
+            ),
+          ),
           title: Text(
             'Surah ${widget.surah.namaLatin}',
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              color: AppColors.white,
+            ),
           ),
-          backgroundColor: AppColors.primary,
+          backgroundColor: AppColors.bg,
           centerTitle: true,
         ),
         body: BlocBuilder<AyatCubit, AyatState>(builder: (context, state) {
@@ -60,6 +69,7 @@ class _AyatPageState extends State<AyatPage> {
                       '${ayat.ar}',
                       textAlign: TextAlign.right,
                       style: const TextStyle(
+                        fontFamily: 'amiri',
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),

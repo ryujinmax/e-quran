@@ -17,17 +17,22 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(24.r),
+          ),
+        ),
+        backgroundColor: AppColors.primary,
         centerTitle: true,
         title: const Text(
-          'Ahlul Quran',
+          'AHLUL QURAN',
           style: TextStyle(
-            color: AppColors.primary,
+            color: AppColors.white,
             fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
         elevation: 0,
-        backgroundColor: Colors.transparent,
       ),
       backgroundColor: AppColors.background,
       body: Padding(

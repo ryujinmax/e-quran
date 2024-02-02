@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
                   client: http.Client(),
                 )),
               ),
-
               BlocProvider(
                 create: (context) => AyatCubit(ApiService(
                   client: http.Client(),
@@ -41,6 +40,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Ahlul Quran App',
               theme: ThemeData(
                 primarySwatch: Colors.brown,
